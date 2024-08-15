@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import WebApp from "@twa-dev/sdk";
+import { getUserTelegramAvatarUrl } from "@/utils/telegram";
 
 interface UserData {
   id: number;
@@ -20,12 +21,9 @@ export default function Home() {
     if (!userId) {
       return;
     }
-    const response = await fetch(
-      `https://telegram-miniapp-test-server.onrender.com/user-avatar/${userId}`
-    );
 
-    const data = await response.json();
-    setUserAvatar(data.userAvatarUrl);
+    const userAvatarUrl = await getUserTelegramAvatarUrl(userId);
+    setUserAvatar(userAvatarUrl);
   };
 
   useEffect(() => {
