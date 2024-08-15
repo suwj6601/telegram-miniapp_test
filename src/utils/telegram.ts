@@ -1,5 +1,5 @@
 export const getUserTelegramAvatarUrl = async (userId: number) => {
-  const botToken = "6296103442:AAHAAQM4Kwu_uv-lqMntXLypk2uGToMDjDY";
+  const botToken = "7094155240:AAEL_OHkXGwUD79vnR3zwb8PJXpCwjxlpfs";
   const apiUrl = `https://api.telegram.org/bot${botToken}/getUserProfilePhotos?user_id=${userId}`;
 
   try {
