@@ -27,6 +27,7 @@ export default function Home() {
     <>
       {userData ? (
         <div>
+          <p>{JSON.stringify(userData)}</p>
           <h1>Hi {userData.first_name}!</h1>
           <p>Your ID is {userData.id}</p>
           <p>Your username is {userData.username}</p>
